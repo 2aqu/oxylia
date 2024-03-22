@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Maintenance mode</title>
+  <meta name="keywords" content="Maintenance Mode" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow" />
+  <style>
+    body {
+        background-color: #1d1d1d;
+        color: #f48ef8;
+        font-family: sans-serif;
+    }
+    .wrap {
+        width: 600px;
+        margin: 200px auto 0;
+        text-align: center;
+    }
+    .wrap h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 90px;
+    }
+    .wrap h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0 0 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>HYGEIART</h1>
+    <h2><p>Hygeiart is under maintenance rightnow.<br/><br/>When u think severally, when u use ur brain literally you can reach the art. art is not an thing. art is You. Everything is art, everywhere is art. just look is not enough u should see. u should feel. i feel like APELIA. i feel like ART. i feel like ASTRONAUT. i feel like TRIPPED. i feel like DRUG.<br /><br /></p></h2>
+    <p>Thank you for your understanding.</p>
+    <div id="countdown"></div>
+  </div>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date();
+    countDownDate.setDate(countDownDate.getDate() + 10); // Adding 10 days to current date
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+
+      // Get the current date and time
+      var now = new Date().getTime();
+
+      // Calculate the remaining time
+      var distance = countDownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the countdown in the element with id="countdown"
+      document.getElementById("countdown").innerHTML = "Maintenance ends in: " + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Maintenance is over!";
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
